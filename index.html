@@ -549,10 +549,26 @@ html[data-ecw-motion] dialog[open]{animation-duration:.2s}
   }
 }
 </style>
+<style>
+.material-owner-swatches { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr)); gap:.5rem; }
+.material-stock-toggle {
+  display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:.35rem .55rem;
+  min-height:48px; padding:.55rem; border:1px solid #39617d; border-radius:10px; color:#e7f3fd;
+  background:#0c2033; font:inherit; font-size:.85rem; text-align:left; cursor:pointer; overflow-wrap:anywhere;
+}
+.material-stock-toggle:has(img) { grid-template-columns:32px minmax(0,1fr) auto; }
+.material-stock-toggle img { width:32px; height:32px; object-fit:cover; border-radius:4px; }
+.material-stock-toggle .material-stock { align-self:center; text-align:center; }
+.material-stock-toggle:focus-visible { outline:2px solid #55eaff; outline-offset:2px; }
+.material-swatch { flex-basis:85px; }
+.material-swatch .swatch-stock-text { font-size:10px; padding:0 2px 5px; color:#9ff4c5; }
+.material-swatch[data-stock="out-of-stock"] .swatch-stock-text { color:#ffd697; }
+.material-swatch[data-stock="sold-out"] .swatch-stock-text { color:#ffbdc7; }
+</style>
 </head>
 <body>
 
-<a class="skip" href="#work">Skip to projects</a><header><a class="logo" href="#top" aria-label="Excellent Cushion Works home"><span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M10 22v-9c0-3 2-5 5-5h10c3 0 5 2 5 5v9M7 19c-2 0-3 2-3 4v8h32v-8c0-2-1-4-3-4s-4 2-4 4H11c0-2-2-4-4-4ZM9 31v4m22-4v4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span><b>EXCELLENT</b>CUSHION WORKS<small class="header-version">Version 1.0.5</small></span></a><nav aria-label="Main navigation"><a href="#work">The work</a><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#materials">Materials</a></nav><a class="header-quote" href="#quote">Let’s talk <span><svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></a></header>
+<a class="skip" href="#work">Skip to projects</a><header><a class="logo" href="#top" aria-label="Excellent Cushion Works home"><span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M10 22v-9c0-3 2-5 5-5h10c3 0 5 2 5 5v9M7 19c-2 0-3 2-3 4v8h32v-8c0-2-1-4-3-4s-4 2-4 4H11c0-2-2-4-4-4ZM9 31v4m22-4v4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span><b>EXCELLENT</b>CUSHION WORKS<small class="header-version">Version 1.0.6</small></span></a><nav aria-label="Main navigation"><a href="#work">The work</a><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#materials">Materials</a></nav><a class="header-quote" href="#quote">Let’s talk <span><svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></a></header>
 
 <main id="top">
 <section class="hero-section" aria-labelledby="hero-title">
@@ -663,7 +679,7 @@ html[data-ecw-motion] dialog[open]{animation-duration:.2s}
 </section>
 </main>
 
-<footer><div class="footer-top"><a class="logo" href="#top"><span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M10 22v-9c0-3 2-5 5-5h10c3 0 5 2 5 5v9M7 19c-2 0-3 2-3 4v8h32v-8c0-2-1-4-3-4s-4 2-4 4H11c0-2-2-4-4-4ZM9 31v4m22-4v4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span><b>EXCELLENT</b>CUSHION WORKS</span></a><span>Comfort, with a whole new attitude.</span><a class="backtop" href="#top">Back to top ↑</a></div><div class="footer-bottom"><span>Excellent Cushion Works · Sri Lanka</span><span>RE-COVER. REBUILD. RESTORE.</span></div><p class="site-version" aria-label="Website version 1.0.5">Version 1.0.5</p></footer><div class="mobile-dock"><a href="#materials">Materials</a><a href="#work">Explore work <svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></a><a href="#quote">Get a quote <svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div>
+<footer><div class="footer-top"><a class="logo" href="#top"><span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M10 22v-9c0-3 2-5 5-5h10c3 0 5 2 5 5v9M7 19c-2 0-3 2-3 4v8h32v-8c0-2-1-4-3-4s-4 2-4 4H11c0-2-2-4-4-4ZM9 31v4m22-4v4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span><b>EXCELLENT</b>CUSHION WORKS</span></a><span>Comfort, with a whole new attitude.</span><a class="backtop" href="#top">Back to top ↑</a></div><div class="footer-bottom"><span>Excellent Cushion Works · Sri Lanka</span><span>RE-COVER. REBUILD. RESTORE.</span></div><p class="site-version" aria-label="Website version 1.0.6">Version 1.0.6</p></footer><div class="mobile-dock"><a href="#materials">Materials</a><a href="#work">Explore work <svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></a><a href="#quote">Get a quote <svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div>
 
 <div id="bar" hidden=""></div>
 
@@ -692,13 +708,16 @@ html[data-ecw-motion] dialog[open]{animation-duration:.2s}
   <label for="material-owner-name">Collection name</label><input id="material-owner-name" maxlength="80">
   <label for="material-owner-type">Type</label><select id="material-owner-type"><option>Fabric</option><option>Velvet</option></select>
   <label for="material-owner-refs">Colours or swatch references, one per line</label><textarea id="material-owner-refs" maxlength="3000"></textarea>
-  <label for="material-owner-availability">Stock status</label>
+  <label for="material-owner-availability">Whole collection status</label>
   <select id="material-owner-availability">
     <option value="in-stock">In stock</option>
     <option value="out-of-stock">Out of stock</option>
     <option value="sold-out">Sold out</option>
   </select>
-  <p class="note">Customers can view unavailable collections but can only add in-stock materials to a quote.</p>
+  <p class="note">Out of stock or Sold out pauses all swatches in this collection.</p>
+  <h4>Individual swatch stock</h4>
+  <p class="note">Click a swatch to change its stock. Save &amp; publish before switching collections.</p>
+  <div id="material-owner-swatches" class="material-owner-swatches"></div>
   <div class="row">
     <button class="btn" type="button" id="material-owner-save">Save &amp; publish</button>
     <button class="btn alt" type="button" id="material-owner-close">Close</button>
@@ -746,6 +765,7 @@ const materials = (() => {
   let project = "";
   let limit = 8;
   let ownerIndex = -1;
+  let ownerStock = new Set();
   const photos = JSON.parse($("material-photos").textContent);
   function photoUrl(item, ref, detail = false) {
     const id = photos.collections[item.photoKey ?? item.name]?.[ref];
@@ -769,6 +789,14 @@ const materials = (() => {
   function stockOf(item) {
     if (item?.stock === "sold-out" || item?.stock === "out-of-stock") return item.stock;
     return item?.available === false && !item.stock ? "out-of-stock" : "in-stock";
+  }
+  function swatchStock(item, ref) {
+    const collection = stockOf(item);
+    if (collection !== "in-stock") return collection;
+    const unavailable = item.outOfStockRefs ?? [];
+    if (ref) return unavailable.includes(ref) ? "out-of-stock" : "in-stock";
+    return item.refs.length && item.refs.every(value => unavailable.includes(value))
+      ? "out-of-stock" : "in-stock";
   }
   function showStock(element, status) {
     element.dataset.stock = status;
@@ -826,11 +854,12 @@ const materials = (() => {
     grid.replaceChildren();
     matches.slice(0, limit).forEach(item => {
       const card = make("article", "", "panel material-card");
-      const summary = item.refs.length ? item.refs.length + " colour or swatch options" : "Ask us about colours";
+      const count = item.refs.filter(ref => swatchStock(item, ref) === "in-stock").length;
+      const summary = item.refs.length ? count + " of " + item.refs.length + " swatches in stock" : "Ask us about colours";
       const matchingRef = query ? item.refs.find(ref => ref.toLowerCase().includes(query) && photoUrl(item, ref)) : "";
       const cover = matchingRef || item.refs.find(ref => photoUrl(item, ref));
       const open = () => openMaterial(item, matchingRef || "");
-      const stock = stockOf(item);
+      const stock = swatchStock(item);
       const stockBadge = make("p", "", "material-stock");
       showStock(stockBadge, stock);
       const pick = button(stock === "in-stock" ? "Choose material" : "View swatches", open);
@@ -850,7 +879,12 @@ const materials = (() => {
   }
   function showPhoto() {
     const selected = $("material-reference").value;
-    const firstRef = active.refs.find(ref => photoUrl(active, ref));
+    const stock = swatchStock(active, selected);
+    showStock($("material-dialog-stock"), stock);
+    $("material-add").disabled = stock !== "in-stock";
+    $("material-status").textContent = stock === "in-stock" ? "" : "Choose an in-stock swatch or use Help me choose in your quote.";
+    const firstRef = active.refs.find(ref => swatchStock(active, ref) === "in-stock" && photoUrl(active, ref))
+      || active.refs.find(ref => photoUrl(active, ref));
     const ref = selected || firstRef;
     const url = ref ? photoUrl(active, ref, true) : "";
     $("material-preview").hidden = !url;
@@ -867,35 +901,36 @@ const materials = (() => {
   function openMaterial(item, initialRef) {
     active = item;
     $("material-dialog-title").textContent = item.name;
-    const stock = stockOf(item);
-    showStock($("material-dialog-stock"), stock);
-    $("material-add").disabled = stock !== "in-stock";
     $("material-ref-note").textContent = item.refs.some(ref => /^IMG_/i.test(ref))
       ? "IMG references identify catalogue swatches. Ask us to confirm the colour."
       : "Choose a colour if you know it.";
     const select = $("material-reference");
     select.replaceChildren(new Option("Decide later", ""));
-    item.refs.forEach(ref => select.add(new Option(ref, ref)));
+    item.refs.forEach(ref => {
+      const status = swatchStock(item, ref);
+      select.add(new Option(status === "in-stock" ? ref : ref + " · " + stockLabels[status], ref));
+    });
     select.value = initialRef;
     const swatches = $("material-swatches");
     swatches.replaceChildren();
     item.refs.forEach(ref => {
       const url = photoUrl(item, ref);
-      if (!url) return;
       const swatch = button("", () => { select.value = ref; showPhoto(); });
+      swatch.dataset.stock = swatchStock(item, ref);
       swatch.className = "material-swatch";
       swatch.dataset.ref = ref;
-      swatch.append(photoImage(url, ""), make("span", ref));
+      if (url) swatch.append(photoImage(url, ""));
+      swatch.append(make("span", ref), make("span", stockLabels[swatch.dataset.stock], "swatch-stock-text"));
       swatches.append(swatch);
     });
     swatches.hidden = !swatches.childElementCount;
     showPhoto();
-    $("material-status").textContent = stock === "in-stock" ? "" : "Choose an in-stock material or use Help me choose in your quote.";
     $("material-dialog").showModal();
   }
   function addMaterial() {
-    if (!active || stockOf(active) !== "in-stock") return;
+    if (!active) return;
     const ref = $("material-reference").value;
+    if (swatchStock(active, ref) !== "in-stock") return;
     const same = chosen.some(choice => choice.item === active && choice.ref === ref);
     if (same || chosen.length >= 3) {
       $("material-status").textContent = same ? "That option is already in your quote." : "Your quote has three choices. Remove one to add another.";
@@ -924,6 +959,37 @@ const materials = (() => {
     }
     return lines.length ? "\n" + lines.join("\n") : "";
   }
+  function ownerRefs() {
+    return [...new Set($("material-owner-refs").value.split(/\r?\n/).map(ref => ref.trim()).filter(Boolean))];
+  }
+  function renderOwnerStock() {
+    const list = $("material-owner-swatches");
+    list.replaceChildren();
+    const item = catalogue()[ownerIndex];
+    const refs = ownerRefs();
+    if (!refs.length) list.append(make("p", "Add a swatch reference above to set its stock.", "note"));
+    refs.forEach(ref => {
+      const change = button("", () => {
+        if (ownerStock.has(ref)) ownerStock.delete(ref);
+        else ownerStock.add(ref);
+        refresh();
+      });
+      change.className = "material-stock-toggle";
+      change.dataset.ref = ref;
+      const url = item ? photoUrl(item, ref) : "";
+      if (url) change.append(photoImage(url, ""));
+      const status = make("span", "", "material-stock");
+      change.append(make("span", ref), status);
+      change.setAttribute("aria-label", ref + " in stock");
+      function refresh() {
+        const inStock = !ownerStock.has(ref);
+        showStock(status, inStock ? "in-stock" : "out-of-stock");
+        change.setAttribute("aria-pressed", String(inStock));
+      }
+      refresh();
+      list.append(change);
+    });
+  }
   function fillOwner(index) {
     ownerIndex = index;
     const item = catalogue()[index];
@@ -931,6 +997,8 @@ const materials = (() => {
     $("material-owner-type").value = item ? item.type : "Fabric";
     $("material-owner-refs").value = item ? item.refs.join("\n") : "";
     $("material-owner-availability").value = stockOf(item);
+    ownerStock = new Set(item?.outOfStockRefs ?? []);
+    renderOwnerStock();
     $("material-owner-status").textContent = "";
   }
   function openOwner() {
@@ -950,10 +1018,14 @@ const materials = (() => {
       status.textContent = name ? "A collection with this name already exists." : "Enter a collection name.";
       return;
     }
-    const refs = [...new Set($("material-owner-refs").value.split(/\r?\n/).map(ref => ref.trim()).filter(Boolean))];
+    const refs = ownerRefs();
     const oldItem = catalogue()[ownerIndex];
     const photoKey = oldItem ? (oldItem.photoKey ?? oldItem.name) : "";
-    const updated = {name, type, refs, photoKey, stock:$("material-owner-availability").value};
+    const updated = {
+      name, type, refs, photoKey,
+      stock: $("material-owner-availability").value,
+      outOfStockRefs: refs.filter(ref => ownerStock.has(ref))
+    };
     const previous = S.materials;
     const index = ownerIndex;
     S.materials = catalogue().slice();
@@ -966,7 +1038,7 @@ const materials = (() => {
       if (index >= 0) {
         for (let i = chosen.length - 1; i >= 0; i--) {
           if (chosen[i].item !== previous[index]) continue;
-          if (stockOf(updated) !== "in-stock" || (chosen[i].ref && !updated.refs.includes(chosen[i].ref))) chosen.splice(i, 1);
+          if (swatchStock(updated, chosen[i].ref) !== "in-stock" || (chosen[i].ref && !updated.refs.includes(chosen[i].ref))) chosen.splice(i, 1);
           else chosen[i].item = updated;
         }
       }
@@ -987,6 +1059,7 @@ const materials = (() => {
   $("material-add").onclick = addMaterial;
   $("material-cancel").onclick = () => $("material-dialog").close();
   $("material-help").onchange = event => { $("material-help-note").hidden = !event.target.checked; };
+  $("material-owner-refs").oninput = renderOwnerStock;
   $("material-owner-pick").onchange = event => fillOwner(Number(event.target.value));
   $("material-owner-save").onclick = saveOwner;
   $("material-owner-close").onclick = () => $("material-owner").close();
